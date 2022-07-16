@@ -2,11 +2,7 @@ pipeline {
     agent any
 
     stages {
-        stage('Checkout') {
-            steps {
-                echo 'Checkout from Git'
-            }
-        }
+        
        stage('Build') {
             steps {
                 echo 'Build Complete'
@@ -20,6 +16,11 @@ pipeline {
        stage('Deploy') {
             steps {
                 echo 'Deployment Done'
+            }
+        }
+        stage('Release') {
+            steps {
+                echo 'Release Completed'
             }
         }
     }
